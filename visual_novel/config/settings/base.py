@@ -86,7 +86,8 @@ INSTALLED_APPS = [
     'news.apps.NewsConfig',
     'notifications.apps.NotificationsConfig',
     'uploads.apps.UploadsConfig',
-    'system_api.apps.SystemApiConfig'
+    'system_api.apps.SystemApiConfig',
+    'stats.apps.StatsConfig',
 ]
 
 PASSWORD_HASHERS = [

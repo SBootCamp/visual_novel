@@ -46,6 +46,7 @@ urlpatterns = [
 
     # API urls
     path('api/', include(api_urls)),
+    path('api/v1/stats/', include('stats.urls')),
 
     # Authentification views
     path('login/', auth_views.LoginView.as_view(
