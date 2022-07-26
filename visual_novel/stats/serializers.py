@@ -11,15 +11,9 @@ class StatsSerializer(serializers.Serializer):
     status = serializers.CharField()
 
     def create(self, validated_data):
-        """
-        Create and return a new `Snippet` instance, given the validated data.
-        """
         return TranslationItem.objects.create(**validated_data)
 
     def update(self, instance, validated_data):
-        """
-        Update and return an existing `Snippet` instance, given the validated data.
-        """
         instance.visual_novel = validated_data.get('visual_novel', instance.title)
         instance.statistics = validated_data.get('statistics', instance.statistics)
         instance.moderators = validated_data.get('moderators', instance.moderators)
